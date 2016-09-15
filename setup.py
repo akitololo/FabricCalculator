@@ -10,7 +10,7 @@
 # subdirectory that contains the files needed to run the application
 
 application_title = "The Julmoth Toolkit" #what you want to application to be called
-main_python_file = "openingcalc_1_0_0.py" #the name of the python file you use to run the program
+main_python_file = "JulmothToolkit.py" #the name of the python file you use to run the program
 
 import sys
 
