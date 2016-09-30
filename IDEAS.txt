@@ -1,0 +1,16 @@
+This file came after Version 1.0.0.
+
+It is to contain any ideas on advancements or future versions of the app and how things are likely to improve.
+These changes or ideas will be catalogued as per versions until a large aesthetic or code base change is made which will mean the version should graduate a whole level.
+
+Version 1.1.0
+=============
+Some aesthetic changes or additions maybe?
+--> These will most likely be minor and not largely focused on. The code base may be reviewed to see if there's ways to do things more simply than initially botched together.
+Some experimental file I/O maybe?
+--> https://python-docx.readthedocs.io/en/latest/
+--> https://automatetheboringstuff.com/chapter13/
+
+---> This file I/O will involve being able to read data in from .csv or .xls/.xlsx files and use it to simply return the answers to that file in the respective column based on the setup. Also file I/O may be attempted with the template provided of an invoice, adding the information that is necessary to the invoice in the backend and pointing to the completed invoice file once it's done.
+
+When any changes have been actioned more commits will be made and the ideas file updated.
