@@ -81,4 +81,48 @@ table.cell(4, 1).text = 'TOTAL'
 total = 'SUM'
 table.cell(4, 5).text = total
 
-document.save( 'demo.docx' )
+document.save( 'quotation_gen.docx' )
+
+
+document1 = Document()
+
+inv_num = 'NUM'
+table = document1.add_table(rows=5, cols=6)
+table.style = 'TableGrid'
+table_title_start = table.cell(0, 0)
+table_title_end = table.cell(0, 5)
+table_title = table_title_start.merge(table_title_end)
+table_title = table_title.add_paragraph()
+title_format = table_title.paragraph_format
+title_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+table_title = table_title.add_run('INVOICE-' + inv_num + '\n')
+table_title.font.size = Pt(16)
+
+table_stamp_start = table.cell(1, 0)
+table_stamp_end = table.cell(1, 5)
+table_stamp = table_stamp_start.merge(table_stamp_end)
+table_stamp.text = employer + const + pobox + input1 + loc + input2 + country + date
+
+hdr_cells = table.rows[2].cells
+hdr_cells[0].text = 'ITEM'
+hdr_cells[1].text = 'DESCRIPTION'
+hdr_cells[2].text = 'QTY'
+hdr_cells[3].text = 'UNIT'
+hdr_cells[4].text = 'RATE\n(KSHS)'
+hdr_cells[5].text = 'AMOUNT\n(KSHS)'
+
+content_cells = table.rows[3].cells
+txt = '\n(Type here)\n\n\n\n\n\n\n'
+values = 'TOTAL\n\n\nVAT 16%\n\n\n\n\n\n\n'
+content_cells[1].text = input3 + txt + values
+
+total = '\n\n\n\n\n\n\nSUM\n\n'
+total2 = '\nSUM_BOLD\n\n'
+tax = '\nTAX'
+content_cells[5].text = total + total2 + tax
+
+table.cell(4, 1).text = 'TOTAL'
+total = 'SUM'
+table.cell(4, 5).text = total
+
+document1.save( 'invoice_gen.docx' )
