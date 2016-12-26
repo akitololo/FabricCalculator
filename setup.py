@@ -9,7 +9,7 @@
 # If everything works well you should find a subdirectory in the build
 # subdirectory that contains the files needed to run the application
 
-application_title = "The Julmoth Toolkit" #what you want to application to be called
+application_title = "The Fabriccounting Toolkit" #what you want to application to be called
 main_python_file = "JulmothToolkit.py" #the name of the python file you use to run the program
 
 import sys
@@ -24,7 +24,7 @@ includes = ["atexit","re"]
 
 setup(
         name = application_title,
-        version = "1.0.0",
+        version = "2.0.0",
         description = "Sample cx_Freeze PyQt4 script",
         options = {"build_exe" : {"includes" : includes }},
         executables = [Executable(main_python_file, base = base)])
